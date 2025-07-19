@@ -242,7 +242,7 @@ def plot_grid(mesh, plotting_inputs):
   lw = plotting_inputs['edge_linewidth']
 
   fig, ax = plt.subplots(figsize=(12,9))
-  plt.scatter(x_nodes, y_nodes, facecolors='none', edgecolors=c_nodes, label='Nodes', s=100)
+  plt.scatter(x_nodes, y_nodes, facecolors='none', edgecolors=c_nodes, label='Nodes', s=25)
 
   for edge in mesh['radial_edge_nodes']:
     plt.plot(edge[2:4], edge[4:6], c_edges, linewidth=lw)
@@ -278,7 +278,7 @@ def plot_grid(mesh, plotting_inputs):
   props = dict(boxstyle='round', facecolor='wheat', alpha=0.3)
 
   # place a text box in upper left in axes coords
-  ax.text(0.75, 0.95, mesh['textstr'], transform=ax.transAxes, fontsize=11,
+  ax.text(0.7, 0.95, mesh['textstr'], transform=ax.transAxes, fontsize=9,
         verticalalignment='top', bbox=props)
   if plotting_inputs['save_figure']:
     plt.savefig("figure.png")
