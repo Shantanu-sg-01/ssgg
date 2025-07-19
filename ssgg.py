@@ -280,6 +280,8 @@ def plot_grid(mesh, plotting_inputs):
   # place a text box in upper left in axes coords
   ax.text(0.75, 0.95, mesh['textstr'], transform=ax.transAxes, fontsize=11,
         verticalalignment='top', bbox=props)
+  if plotting_inputs['save_figure']:
+    plt.savefig("figure.png")
   plt.show()
 
 def write_mesh(mesh, Filename_Suffix):
