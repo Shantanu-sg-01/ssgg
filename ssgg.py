@@ -241,7 +241,7 @@ def plot_grid(mesh, plotting_inputs):
   c_edges = colors[plotting_inputs['edge_color']]
   lw = plotting_inputs['edge_linewidth']
 
-  fig, ax = plt.subplots(figsize=(16,12))
+  fig, ax = plt.subplots(figsize=(12,9))
   plt.scatter(x_nodes, y_nodes, facecolors='none', edgecolors=c_nodes, label='Nodes', s=100)
 
   for edge in mesh['radial_edge_nodes']:
