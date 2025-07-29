@@ -126,7 +126,7 @@ def grid_generator(radius,
     if n2 > N_r and n1 !=0:
       n4 = n1 - N_r
       x_elem_cent, y_elem_cent = calc_centroid_triangle(mesh['nodes_cart'], n1, n2, n4)
-      elements = np.vstack([elements, [element_number, n1+1, n2+1, n4+1, x_elem_cent, y_elem_cent]])
+      elements = np.vstack([elements, [element_number, n1+1, n4+1, n2+1, x_elem_cent, y_elem_cent]])
       element_number += 1
   mesh['elements'] = elements
   textstr = '\n'.join((
